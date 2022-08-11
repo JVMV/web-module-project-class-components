@@ -1,10 +1,13 @@
 import React from 'react'
 
 export default class Todo extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div>
-        This text will equal 1 todo task.
+        {`${this.props.todo.name} ${this.props.todo.completed ? 'Complete' : 'Incomplete'}`}
       </div>
     )
   }

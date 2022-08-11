@@ -1,17 +1,24 @@
 import React from 'react'
 
 export default class Form extends React.Component {
-  addToDo = e => {
-    e.preventDefault()
+  constructor(props) {
+    super(props)
   }
+
   render() {
     return (
       <>
-      <form onSubmit={null}>
-        <input className='input' type='text' placeholder='Add something to do' />
-        <button onClick={this.addToDo}>Add</button>
+      <form onSubmit={this.props.addTodo}>
+        <input 
+          className='input' 
+          type='text' 
+          placeholder='Add something to do' 
+          value={this.props.initial}
+          onChange={this.props.onChange}
+        />
+        <button>Add</button>
       </form>
-      <button onClick={this.addToDo}>Clear Completed Tasks</button>
+      <button onClick={this.props.addTodo}>Clear Completed Tasks</button>
       </>
     )
   }
