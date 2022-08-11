@@ -18,7 +18,7 @@ export default class Form extends React.Component {
         />
         <button>Add</button>
       </form>
-      <button onClick={this.props.addTodo}>Clear Completed Tasks</button>
+      <button onClick={this.props.onClear}>Clear Completed Tasks</button>
       </>
     )
   }

@@ -6,7 +6,7 @@ export default class Todo extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div onClick={this.props.markTodo}>
         {`${this.props.todo.name} ${this.props.todo.completed ? 'Complete' : 'Incomplete'}`}
       </div>
     )
