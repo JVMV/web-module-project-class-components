@@ -4,7 +4,7 @@ export default class Todo extends React.Component {
   render() {
     return (
       <div>
-        Todo
+        This text will equal 1 todo task.
       </div>
     )
   }
